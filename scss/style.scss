@@ -1,0 +1,661 @@
+$padding-base: 15px;
+$color-body: #fff;
+$color-border: #ddd;
+$color-link: #0275d8;
+$border-radius: .25rem;
+$text:    #d1d9e0;
+$icon:    #d1d9e0;
+$navbarColor:#006699;
+$mainPanel:#fff;
+$bodyBackground:rgb(240, 240, 240);
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300|Roboto|Raleway:300,700&display=swap');
+
+body,
+html,
+section {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+}
+
+body,html {
+    background-color: $bodyBackground !important;
+    position: relative;
+    z-index: -2;    
+}
+
+.bg-img {
+    background-image: url("../images/hot-air-balloon.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    filter: brightness(115%);
+    height: 90%;
+
+}
+
+.parallax {
+    position: relative;
+    z-index: -1;
+}
+
+/*navbar & media query & image*/
+
+@media (min-width: 380px) and (max-width: 850px) {
+    .navbar:not(.top-nav-collapse) {
+        height: 40px !important;
+    line-height: 40px !important;
+    background-color: $navbarColor;
+    }
+    a.nav-link{
+      background-color: $navbarColor;
+      padding: 0;
+    }
+    a.nav-link:hover{
+      background-color: #0476ae;
+    }
+
+    li.nav-item{
+      padding: 0;
+    }
+    .float-div{
+      position: absolute;
+      top: 0px!important;
+    }
+    .navbar-toggler:focus{
+      outline: none !important;
+    }
+    .prxx{
+      transition: .8s ease!important; 
+      transform: rotate(180deg);
+    }
+    .prxy{
+      transition: .8s ease!important; 
+      transform: rotate(0deg);
+    }
+    .collapsing{
+      transition: all .5s ease-out!important; 
+    }
+
+    
+}
+
+.fa-plus,
+.fa-home {
+    color: $icon;
+    font-size: 1.5rem;
+}
+
+a.nav-link {
+    font-family: 'Raleway', sans-serif;
+    list-style: none;
+    color:$text;
+    font-size: 1.3rem;
+}
+
+.fa-plus:hover,
+.fa-home:hover,
+a.nav-link:hover {
+    color:  white;
+}
+
+.fa-angle-up{
+  opacity: 0;
+  font-size:3rem;
+  color:$navbarColor;
+  cursor:pointer;
+  position: fixed;
+  bottom:20px;
+  right:20px;
+  transition: all 1s ease;
+}
+.arriba {  
+  opacity: 1!important;
+}
+.active{
+  color: white!important;
+}
+.navi {
+    height: 100px;
+    line-height: 100px;
+    transition: height .8s, line-height .1s;
+}
+
+.naveffect {
+    height: 40px !important;
+    line-height: 40px !important;
+    background-color: $navbarColor;
+
+}
+
+
+.brand-logo {
+    color:$text;
+    border-bottom: 1px solid $icon;
+    
+}
+.brand-logo h3{
+  font-size: 4rem;
+  font-family: 'Raleway', sans-serif;
+
+}
+.brand-logo h5{
+  font-family: 'Montserrat', sans-serif;
+}
+
+.brand-logo-position {
+    top: 210px;
+    position: relative;
+}
+
+/*navbar & media query & image end*/
+
+/* presentation, main panel & text-format*/
+.main-panel {    
+    top: -30px;
+    position: relative;
+
+}
+
+.header {
+    font-size: 2rem;
+    padding-bottom: 20px;
+    margin: 0;
+    color: #22262a;
+    text-align: center;
+    border-bottom: 2px solid $navbarColor;
+    font-family: 'Raleway', sans-serif;
+
+}
+.header-2 {
+    font-size: 1.5rem;
+    margin: 0;
+    color:#22262a;
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+
+}
+.header-3 {
+    font-size: 3rem;
+    color: #22262a;
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+
+}
+.marcado{
+  padding-left: 10px;
+  border-left: 2px solid $navbarColor;
+}
+
+.main-panel-shadow {
+    box-shadow: 0px 0px 15px 3px rgba(0, 0, 0, 0.50);
+    background-color:$mainPanel;
+    border-radius: 5px 5px;
+}
+
+.parrafo {
+    font-size: 1rem;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 1.2px;
+    word-spacing: 1.5px;
+    color: #454d54;
+
+}
+/* presentation, main panel & text-format end*/
+
+/*card format*/
+.card-body p{
+   font-size: 1rem;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 1px;
+    word-spacing: 1.5px;
+    color: #454d54;
+}
+.card-body h3{
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  font-family: 'Roboto', sans-serif ;
+  color:#22262a;
+}
+
+.card{
+  border-radius: 5px 5px!important;
+  background-color: #ffffff!important;
+
+}
+
+
+.cardi{
+  position: absolute;
+  top: 50%;
+  opacity: 0;
+   
+}
+.card-deck div:nth-child(2) .card  {
+  transition: all 1s ease;
+}
+.card-deck div:nth-child(3) .card {
+  transition: all .6s ease;
+}
+.card-deck div:nth-child(1) .card {
+  transition: all 1.2s ease;
+}
+.cardi0{
+  opacity: 1;
+  transform: translateY(-50%);
+}
+
+.card-header{
+  background-color:  $navbarColor!important;
+  color: $text;
+  font-family: 'Roboto', sans-serif ;
+}
+.img-card {
+    box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0.3);
+    margin-bottom: 10px;
+
+}
+.img-card-float {
+    top: -40px !important;
+    position: relative !important;
+    border-radius: 5px 5px 5px 5px!important;
+    box-shadow: 0px 10px 20px 5px rgba(0, 0, 0, 0.3);
+}
+
+.card-shadow{
+  box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.3);
+}
+
+.container-card {
+    display: flex;
+    justify-content: center;
+}
+.card-border {
+    border-bottom: 1px solid lightgrey;
+    padding: 6px;
+}
+.contact-card{
+  font-family: 'Raleway', sans-serif;
+  font-size: 1.4rem;
+  padding-top: 10px;
+
+}
+/*card format end*/
+
+/* about section & icons format*/
+.fa-layer-group,
+.fa-paint-brush,
+.fa-mobile-alt,
+.fa-grip-horizontal,
+.fa-pencil-ruler,
+.fa-laravel,
+.fa-angular,
+.fa-react,
+.fa-node,
+.fa-css3-alt,
+.fa-html5{
+  color: $navbarColor!important;
+}
+@mixin contact-icon{
+    .fa-user{
+    color:  $navbarColor!important;
+  }
+}
+.contact-icon{
+    
+    color:  $navbarColor!important;
+  }
+
+.float-div{
+  position: relative;
+  top: 100px;
+}
+
+/* about section & icons format end*/
+
+/* buttons format*/
+.btn-color{
+  background-color: $navbarColor;
+  text-transform: uppercase;
+  color: $text;
+  border-radius: 0 0!important;
+}
+.btn-color:hover{
+  background-color:   #0476ae;
+}
+
+/* buttons format end*/
+
+/*team section */
+.team-title{
+  font-size: 1.2rem!important;
+    font-family: 'Montserrat', sans-serif;
+    color: $navbarColor!important;
+    text-transform: none!important;
+    position: relative;
+    top: -15px;
+}
+.teamName{
+  font-size: 1.3rem!important;
+    font-family: 'Montserrat:500', sans-serif;
+    color: $navbarColor!important;
+    padding-top: 170px;
+}
+.team-social-icon{
+    font-size: 1.4rem;
+    text-decoration: none;
+    color: $navbarColor;
+    padding-left: 15px;
+    padding-right: 15px;
+
+}
+.team-social-icon:hover{
+  text-decoration: none;
+}
+/*team section end*/
+
+/* form contact format section */
+input,
+textarea{
+  border-style: none!important;
+  border-bottom: 1px solid lightgrey!important;
+}
+input {
+    border-top: none;
+}
+
+.style-label {
+    cursor: text;
+    font-family: 'Montserrat', sans-serif;
+    position: relative;
+    left: 60px;
+    top: -40px;
+    z-index: 3;
+    transition: all .5s ease;
+}
+i{
+  transition: all .3s ease;
+}
+
+textarea.input+.style-label {
+    left: 14px;
+    top: -90px;
+}
+
+
+.style-label-focus {
+    transform: translate(0, -70%);
+    color: $navbarColor;
+
+}
+
+.form-control,
+.form-control:focus {
+    border-left: none;
+    border-top: none;
+    border-right: none;
+    outline: none !important;
+    box-shadow: none !important;
+    border-radius: 0 !important;
+}
+.form-control{
+  border-left: none;
+    border-top: none;
+    border-right: none;
+}
+
+.style-label::after,
+.style-label::before {
+    content: '';
+    position: absolute;
+    right: 0;
+    float: right;
+    ;
+    width: 100%;
+    text-align: left;
+    pointer-events: none;
+}
+.cards{
+  box-shadow: 0px 0px 15px 2px rgba(0,0,0,0.5);
+}
+input:focus,
+textarea:focus{
+ border-bottom-color: $navbarColor!important;
+ transition: all 1s ease;
+}
+.pruebax{
+  position: absolute;
+  height: 2px;
+  background-color: blue;
+    left: 53px;
+    top: 112px;
+    width: 0;
+  transition: .5s ;
+}
+.pruebad:hover ~ .pruebax{
+  width: 100%;
+  transition:.5s ;
+}
+.pruebad:focus:after{
+  width: 100%;
+}
+/* form contact format section end */
+
+/*footer section */
+.footer {
+    background-color: #1a1a1a;
+    color: $text;
+    height: 70px;
+    box-shadow: 0px 0px 40px 2px rgba(0,0,0,0.5);
+
+}
+
+.icon-size {
+    font-size: 1.4rem;
+    text-decoration: none;
+    color: white;
+    transition: all .2s ease;
+}
+
+.icon-size:hover {
+    text-decoration: none;
+    color: white;
+    transform: scale(1.3, 1.3);
+}
+
+.social-icon {
+    display: inline-block;
+    font-size: 1.5rem;
+    padding-top: .4rem;
+}
+
+.iconw::before {
+    font-family: "Font Awesome 5 Brands";
+    font-weight: 900;
+    content: "\f232";
+    font-size: 1.4rem;
+    padding-left: 5px;
+    padding-right: 5px;
+    color: $navbarColor;
+}
+
+.iconp::before {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f155";
+    font-size: 4rem;
+    padding-left: 5px;
+    padding-right: 5px;
+    color: white;
+}
+
+.price {
+    color: white;
+    font-size: 4.5rem;
+}
+.copy{
+  font-family: 'Raleway', sans-serif;
+  color: white;
+}
+
+h3 span.period {
+    color: #5c6670;
+    font-weight: lighter;
+}
+h5 span.period {
+    color: $text;
+    font-weight: lighter;
+}
+
+ul li {
+    list-style-type: none;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.checkin,
+.checkout{
+  font-family: 'Roboto', sans-serif;
+}
+.checkin::before {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: '\f00c';
+    padding-right: 10px;
+    color: $navbarColor;
+}
+.floating{
+  position: relative;
+  top: -15px;
+  background-color: $bodyBackground;
+}
+
+.checkout::before {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: '\f00d';
+    padding-right: 15px;
+}
+
+.checkout {
+    color: grey;
+}
+div.divimg{
+    background-image: url("../images/workstation.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.red{
+  background-color: red;
+  font-family: ModernSans;
+}
+.red2{
+  display: flex;
+  flex-direction: row-reverse!important;
+}
+.red3{
+  display: flex;
+  flex-direction: row-reverse!important;
+  position: relative;
+}
+.blue{
+  background-color: blue;
+
+}
+.black{
+  background-color: black;
+  height: 200px;
+  position: relative;
+}
+.yellow{
+  background-color: yellow;
+  height: 200px;
+  position: relative;
+  top: -200px;
+}
+@media screen and (min-width: 780px) {
+  .yellow, .red3, .black{
+    position: absolute;
+    top: 0;
+  }
+}
+
+.panel1{
+  grid-area: ptop;
+}
+.panel2{
+  grid-area: pright;
+}
+.panel3{
+  grid-area: pleft;
+}
+.panel4{
+  grid-area: pmiddle;
+}
+.panel5{
+  grid-area: pbot;
+}
+
+.grid-template{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+    grid-gap: 10px;
+    grid-auto-flow: dense;
+  
+}
+.grid-template div:nth-child(1){
+  grid-row-start: 1;
+  grid-row-end: 2;
+  grid-column-start: 1;
+  grid-column-end: 9;
+}
+.grid-template div:nth-child(2){
+    grid-row-start: 1;
+  grid-row-end: 4;
+  grid-column-start:9;
+  grid-column-end: 13;
+}
+.grid-template div:nth-child(3){
+    grid-row-start: 2;
+  grid-row-end:5;
+  grid-column-start: 1;
+  grid-column-end: 5;
+}
+.grid-template div:nth-child(4){
+    grid-row-start: 2;
+  grid-row-end:4;
+  grid-column-start: 5;
+  grid-column-end: 9;
+}
+.grid-template div:nth-child(5){
+    grid-row-start: 4;
+  grid-row-end:5;
+  grid-column-start: 5;
+  grid-column-end: 13;
+}
+
+.pmain1{
+  grid-area: mtop;
+}
+.pmain2{
+  grid-area: mright;
+}
+.pmain3{
+  grid-area: mbot;
+}
+.main-template{
+  display: grid;
+  grid-template-areas: 
+  'mtop mtop mtop mright mright mright'
+  'mbot mbot mbot mright mright mright ';
+  grid-gap: 10px;
+  padding: 10px;
+  grid-template-columns:  repeat(auto,1fr);
+}
+.flex-grid{
+  display: flex;
+  flex-direction: row;
+}
